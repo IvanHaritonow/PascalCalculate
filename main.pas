@@ -52,6 +52,10 @@ oprt: char;
 begin
   check := 0;
   readln(str);
+  if (str.Length > 21) then begin
+    writeln('Error #5');
+    calculate();
+  end;
   if (str.Length < 3) then begin
     writeln('Error #2');
     calculate();
