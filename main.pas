@@ -118,6 +118,15 @@ begin
     calculate();
   end;
   
+  if (aOrt.Length > 9) then begin
+    writeln('Error #6');
+    calculate();
+  end;
+  if (bOrt.Length > 9) then begin
+    writeln('Error #7');
+    calculate();
+  end;
+  
   a := StrToInt(aOrt);
   if (bOrt = '') then begin
     writeln('Error #3');
