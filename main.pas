@@ -52,6 +52,10 @@ oprt: char;
 begin
   check := 0;
   readln(str);
+  for i := 1 to str.Length do
+    str[i] := UpCase(str[i]);
+//  if(str = 'EXIT') then 
+//    exit();
   if (str.Length > 21) then begin
     writeln('Error #5');
     calculate();
@@ -60,7 +64,7 @@ begin
     writeln('Error #2');
     calculate();
   end;
-  if(str = 'clear') then begin
+  if(str = 'CLEAR') then begin
       clrscr();
       calculate();
   end;
@@ -139,7 +143,8 @@ begin
   
   res := resultIs(a, b, oprt);
   
-  writeln(res);
+  writeln('= ', res);
+  writeln();
   calculate();
 end;
 
